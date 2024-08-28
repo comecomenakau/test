@@ -4,8 +4,8 @@
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+  "updateContentCommand": "npm install -g typescript ts-node tslab && pip install jupyterlab notebook",
+  "postCreateCommand": "tslab install --version && tslab install",
   "customizations": {
     "codespaces": {
       "openFiles": []
@@ -13,8 +13,15 @@
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
-        "ms-python.python"
+        "ms-typescript.typescript-javascript"
       ]
+    }
+  },
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter",
+      "onAutoForward": "notify"
     }
   }
 }
