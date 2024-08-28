@@ -1,0 +1,14 @@
+{
+    "docker.commands.composeUp": [
+      {
+        "label": "Compose Up",
+        "template": "docker-compose -f ${workspaceFolder}/docker-compose.yml up -d"
+      }
+    ],
+    "docker.commands.composeDown": [
+      {
+        "label": "Compose Down",
+        "template": "docker-compose -f ${workspaceFolder}/docker-compose.yml down"
+      }
+    ]
+  }
